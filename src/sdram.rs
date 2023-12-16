@@ -198,7 +198,7 @@ impl<IC: SdramChip, FMC: FmcPeripheral> Sdram<FMC, IC> {
             "Not enough bank address pins to access all internal banks"
         );
 
-        fmc_trace!("Bank selected via pins: {}.", BANK::TARGET);
+        fmc_trace!("Bank selected via pins: {:?}.", BANK::TARGET);
 
         Sdram {
             target_bank: BANK::TARGET,
